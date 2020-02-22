@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainMenuBoard"
+    tools:showIn="@layout/app_bar_main_menu_board">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/titleDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:text="Olayiwola Jagun"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/viewPagerCarousel"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/tv_appname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="20"
+                            android:textSize="70sp"
+                             />
+                        <TextView
+                            android:id="@+id/markedPupils"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_centerHorizontal="true"
+                            android:text="Pupils"
+                            android:textSize="20sp"
+                            android:layout_below="@+id/tv_appname"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    card_view:cardElevation="0dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_appname2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="10dp"
+                            android:text="19"
+                            android:textSize="70sp"
+                             />
+
+                        <TextView
+                            android:id="@+id/unmarkedPupil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"
+                            android:text="Pupils"
+                            android:textSize="20sp"
+                            android:layout_below="@+id/tv_appname2"
+                            />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+<!--            <Button-->
+<!--                android:id="@+id/guardians"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:background="@drawable/dark_button_transparent_background"-->
+<!--                android:drawableStart="@drawable/ic_profile"-->
+<!--                android:drawableEnd="@drawable/ic_add_light_24dp"-->
+<!--                android:drawablePadding="20dp"-->
+<!--                android:padding="20dp"-->
+<!--                android:text="GUARDIANS"-->
+<!--                android:textAlignment="textStart"-->
+<!--                android:textColor="@color/black" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/createUser"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:background="@drawable/dark_button_transparent_background"-->
+                <!--android:drawableStart="@drawable/ic_account_light"-->
+                <!--android:drawableEnd="@drawable/ic_add_light_24dp"-->
+                <!--android:drawablePadding="20dp"-->
+                <!--android:padding="20dp"-->
+                <!--android:text="CREATE ACCOUNT"-->
+                <!--android:textAlignment="textStart"-->
+                <!--android:textColor="@color/black" />-->
+
+            <Button
+                android:id="@+id/qrcodeScan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/dark_button_transparent_background"
+                android:drawableStart="@drawable/ic_qr_code_light"
+                android:drawableEnd="@drawable/ic_add_light_24dp"
+                android:drawablePadding="20dp"
+                android:padding="20dp"
+                android:text="SCAN QR CODE"
+                android:textAlignment="textStart"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
